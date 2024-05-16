@@ -236,3 +236,22 @@ a:focus,
 a:active {
   color: #2980b9;
 }
+
+.container {
+  margin: 1rem auto 1rem;
+  /* width:500px; */
+  width: auto;
+  display:table;
+}
+  .container > div {
+    display:table-cell;
+  }
+    .container .left {
+      width: 70%;
+      vertical-align:top;
+      text-align:left;
+    }
+    .container .right {
+      width: 30%;
+      text-align:right;
+    }
