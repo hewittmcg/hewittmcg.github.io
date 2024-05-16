@@ -1,83 +1,3 @@
-@media print {
-  *,
-  *:before,
-  *:after {
-    background: transparent !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-
-html {
-  font-size: 12px;
-}
-
-@media screen and (min-width: 32rem) and (max-width: 48rem) {
-  html {
-    font-size: 15px;
-  }
-}
-
-@media screen and (min-width: 48rem) {
-  html {
-    font-size: 16px;
-  }
-}
-
-body {
-  line-height: 1.3;
-}
-
 p,
 .splendor-p {
   font-size: 1rem;
@@ -94,7 +14,6 @@ h4,
 .splendor-h4 {
   margin: 1.414rem 0 .5rem;
   font-weight: inherit;
-  line-height: 0.3;
 }
 
 h1,
@@ -165,93 +84,38 @@ body {
   max-width: 100%;
 }
 
-/* === A bit of a gross hack so we can have bleeding divs/blockquotes. */
-
 p,
-*:not(div):not(img):not(body):not(html):not(blockquote):not(p) {
-  /* margin: 1rem auto 1rem; */
+* {
   max-width: 36rem;
-  padding: .25rem;
-}
-
-div {
-  width: 100%;
-}
-
-div img {
-  width: 100%;
-}
-
-blockquote p {
-  font-size: 1.5rem;
-  font-style: italic;
-  margin: 1rem auto 1rem;
-  max-width: 48rem;
 }
 
 ul {
-  margin: 0.1rem auto 0.1rem;
+  margin: 1rem auto 1rem;
 }
 
 li {
-  margin: 0.1rem auto 0.1rem;
-  margin-left: 2rem;
-  line-height: 0.6;
+  margin-left: -1rem;
+  line-height: 1.141;
 }
-
-/* Counteract the specificity of the gross *:not() chain. */
-
-h1 {
-  padding: 4rem 0 !important;
-}
-
-/*  === End gross hack */
 
 p {
   color: #555;
   height: auto;
   line-height: 1.141;
-  margin: 0.1rem auto 0.1rem;
-}
-
-pre,
-code {
-  font-family: Menlo, Monaco, "Courier New", monospace;
-}
-
-pre {
-  background-color: #fafafa;
-  font-size: .8rem;
-  overflow-x: scroll;
-  padding: 1.125em;
-}
-
-a,
-a:visited {
-  color: #3498db;
-}
-
-a:hover,
-a:focus,
-a:active {
-  color: #2980b9;
+  margin: 1rem auto 1rem;
 }
 
 .container {
-  margin: 1rem auto 1rem;
-  /* width:500px; */
-  width: auto;
-  display:table;
+  margin: 0 auto 0;
+  display: flex;
+  align-items: start;
+  max-width: 36rem; /* Max combined width for the container and its contents */
 }
-  .container > div {
-    display:table-cell;
-  }
-    .container .left {
-      width: 70%;
-      vertical-align:top;
-      text-align:left;
-    }
-    .container .right {
-      width: 30%;
-      text-align:right;
-    }
+.container img {
+  padding-top: 1rem;
+  max-width: 150px; 
+  height: auto;
+}
+.text-content {
+  flex: 1;
+}
