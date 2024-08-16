@@ -109,11 +109,12 @@ p {
   margin: 0 auto 0;
   display: flex;
   align-items: start;
-  max-width: 36rem; /* Max combined width for the container and its contents */
+  max-width: 46rem; /* Max combined width for the container and its contents */
 }
 .container img {
   padding-top: 1rem;
-  max-width: 150px; 
+  padding-left: 2rem;
+  max-width: 17rem;
   height: auto;
 }
 .text-content {
