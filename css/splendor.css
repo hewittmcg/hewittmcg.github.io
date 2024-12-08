@@ -1,7 +1,9 @@
 p,
 .splendor-p {
   font-size: 1rem;
-  margin-bottom: 1.3rem;
+  margin-bottom: 1rem;
+  line-height: 1.3; /* Reduced line height */
+  color: #222; /* Darkened font color */
 }
 
 h1,
@@ -12,53 +14,46 @@ h3,
 .splendor-h3,
 h4,
 .splendor-h4 {
-  margin: 1.414rem 0 .5rem;
-  font-weight: inherit;
+  margin: 1.2rem 0 0.5rem;
+  font-weight: bold;
+  line-height: 1.2; /* Reduced line height */
+  color: #111; /* Darker color for headings */
 }
 
 h1,
 .splendor-h1 {
-  margin: 1rem auto 1rem;
-  font-size: 3.998rem;
+  font-size: 3.2rem;
 }
 
 h2,
 .splendor-h2 {
-  margin: 1rem auto 1rem;
-  font-size: 2.827rem;
+  font-size: 2.4rem;
 }
 
 h3,
 .splendor-h3 {
-  margin: 1rem auto 1rem;
-  font-size: 1.999rem;
+  font-size: 2rem;
 }
 
 h4,
 .splendor-h4 {
-  margin: 1rem auto 1rem;
-  font-size: 1.414rem;
+  font-size: 1.5rem;
 }
 
 h5,
 .splendor-h5 {
   margin: 1rem auto 1rem;
-  font-size: 1.121rem;
-}
-
-h6,
-.splendor-h6 {
-  margin: 1rem auto 1rem;
-  font-size: .88rem;
+  font-size: 1.2rem; /* Slightly larger than body text */
+  font-weight: bold; /* Emphasize the subheading */
+  color: #333; /* Slightly darker to make it stand out */
+  line-height: 1.3; /* Adjust line-height for better spacing */
 }
 
 small,
 .splendor-small {
-  margin: 1rem auto 1rem;
-  font-size: .707em;
+  font-size: 0.875rem;
+  color: #666;
 }
-
-/* https://github.com/mrmrs/fluidity */
 
 img,
 canvas,
@@ -68,9 +63,10 @@ svg,
 select,
 textarea {
   max-width: 100%;
+  height: auto;
 }
 
-@import url(http://fonts.googleapis.com/css?family=Merriweather:300italic,300);
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700&display=swap');
 
 html {
   font-size: 18px;
@@ -78,8 +74,9 @@ html {
 }
 
 body {
-  color: #444;
+  color: #222; /* Darkened body font color */
   font-family: 'Merriweather', Georgia, serif;
+  background-color: #fefaf0;
   margin: 0;
   max-width: 100%;
 }
@@ -90,33 +87,69 @@ p,
 }
 
 ul {
-  margin: 1rem auto 1rem;
+  margin: 1rem auto;
+  padding-left: 1.2rem;
+  line-height: 1.3; /* Reduced line height for lists */
 }
 
 li {
-  margin-left: -1rem;
-  line-height: 1.141;
+  margin-bottom: 0.5rem;
+  line-height: 1.3; /* Reduced line height */
 }
 
 p {
-  color: #555;
+  color: #222; /* Darkened paragraph text */
   height: auto;
-  line-height: 1.141;
-  margin: 1rem auto 1rem;
+  margin: 1rem auto;
+  line-height: 1.3; /* Reduced line height for paragraphs */
 }
 
 .container {
-  margin: 0 auto 0;
+  margin: 0 auto;
   display: flex;
   align-items: start;
-  max-width: 46rem; /* Max combined width for the container and its contents */
+  max-width: 46rem;
+  padding: 1.5rem;
 }
+
 .container img {
   padding-top: 1rem;
   padding-left: 2rem;
   max-width: 17rem;
   height: auto;
 }
+
 .text-content {
   flex: 1;
+  padding-right: 1.5rem;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Small screen optimization */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .container img {
+    padding-left: 0;
+    margin-bottom: 1rem;
+  }
+  .text-content {
+    padding-right: 0;
+  }
 }
