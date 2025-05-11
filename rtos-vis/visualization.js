@@ -18,6 +18,20 @@ export function initializeSVG() {
     svg.setAttribute('viewBox', '0 0 800 350');
     container.appendChild(svg);
 
+    // Cancel hover effects whenever we leave the SVG
+    svg.addEventListener('mouseleave', () => {
+        tooltip.style.display = 'none';
+    
+        // Reset all task bars to normal appearance
+        state.taskBars.forEach(bar => {
+            gsap.to(bar, {
+                opacity: 1,
+                scale: 1,
+                duration: 0.2
+            });
+        });
+    });
+
     return svg;
 }
 
