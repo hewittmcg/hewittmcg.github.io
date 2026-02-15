@@ -44,7 +44,7 @@ h4,
 
 h5,
 .splendor-h5 {
-  margin: 1rem auto 1rem;
+  margin: 1rem 0 1rem;
   font-size: 1.2rem; /* Slightly larger than body text */
   font-weight: bold; /* Emphasize the subheading */
   color: #333; /* Slightly darker to make it stand out */
@@ -84,12 +84,13 @@ body {
 }
 
 p,
-* {
+h1, h2, h3, h4, h5, h6,
+ul, ol {
   max-width: 36rem;
 }
 
 ul {
-  margin: 1rem auto;
+  margin: 1rem 0;
   padding-left: 1.2rem;
   line-height: 1.3; /* Reduced line height for lists */
 }
@@ -102,7 +103,7 @@ li {
 p {
   color: #222; /* Darkened paragraph text */
   height: auto;
-  margin: 1rem auto;
+  margin: 1rem 0;
   line-height: 1.3; /* Reduced line height for paragraphs */
 }
 
@@ -179,9 +180,21 @@ a:hover {
   }
   .container img {
     padding-left: 0;
+    max-width: 100%;
     margin-bottom: 1rem;
   }
   .text-content {
     padding-right: 0;
+  }
+  .nav-bar {
+    flex-wrap: wrap;
+    gap: 0.3rem 1rem;
+  }
+  .nav-title {
+    margin-right: auto;
+  }
+  .nav-link {
+    margin-right: 1rem;
+    font-size: 1rem;
   }
 }
