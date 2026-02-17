@@ -4,8 +4,9 @@ p,
 .splendor-p {
   font-size: 1rem;
   margin-bottom: 1rem;
-  line-height: 1.5;
-  color: #222;
+  line-height: 1.6;
+  color: #444;
+  font-weight: 400;
 }
 
 h1,
@@ -15,13 +16,15 @@ h2,
 h3,
 .splendor-h3 {
   margin: 0.5rem 0 0.5rem;
+  letter-spacing: 0.01em;
 }
 h4,
 .splendor-h4 {
   margin: 1.2rem 0 0.5rem;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 1.2;
-  color: #111;
+  color: #333;
+  letter-spacing: 0.01em;
 }
 
 h1,
@@ -48,9 +51,10 @@ h5,
 .splendor-h5 {
   margin: 1rem 0 0.25rem;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 500;
   color: #333;
   line-height: 1;
+  letter-spacing: 0.01em;
 }
 
 h4 + p,
@@ -80,12 +84,12 @@ textarea {
 }
 
 html {
-  font-size: 18px;
+  font-size: 17px;
   max-width: 100%;
 }
 
 body {
-  color: #222; /* Darkened body font color */
+  color: #444;
   font-family: 'IBM Plex Sans', system-ui, sans-serif;
   background-color: #fefaf0;
   margin: 0;
@@ -101,12 +105,12 @@ ul, ol {
 ul {
   margin: 0.5rem 0 1rem;
   padding-left: 1.2rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 li {
   margin-bottom: 0.3rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 li::marker {
@@ -114,17 +118,17 @@ li::marker {
 }
 
 p {
-  color: #222;
+  color: #444;
   height: auto;
   margin: 1rem 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .container {
   margin: 0 auto;
   display: flex;
   align-items: start;
-  max-width: 46rem;
+  max-width: 50rem;
   padding: 1.5rem;
 }
 
@@ -146,7 +150,7 @@ p {
 }
 
 a {
-  color: #3f7bbf;
+  color: #2563eb;
   text-decoration: none;
   transition: color 0.15s ease;
 }
@@ -161,7 +165,7 @@ a:hover {
   padding: 0.8rem 1.5rem;
   text-align: left;
   border-bottom: 1px solid #e0dbd0;
-  max-width: 46rem;
+  max-width: 50rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -170,13 +174,13 @@ a:hover {
 .nav-title {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #111;
+  color: #333;
   margin-right: 2rem;
 }
 
 .nav-link {
   margin-right: 2rem;
-  color: #3f7bbf;
+  color: #2563eb;
   text-decoration: none;
   font-size: 1.2rem;
 }
@@ -186,7 +190,7 @@ a:hover {
 }
 
 .nav-active {
-  color: #111;
+  color: #333;
   font-weight: bold;
 }
 
