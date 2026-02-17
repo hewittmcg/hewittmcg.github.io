@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
 p,
 .splendor-p {
   font-size: 1rem;
@@ -77,8 +79,6 @@ textarea {
   height: auto;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700&display=swap');
-
 html {
   font-size: 18px;
   max-width: 100%;
@@ -86,7 +86,7 @@ html {
 
 body {
   color: #222; /* Darkened body font color */
-  font-family: 'Merriweather', Georgia, serif;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
   background-color: #fefaf0;
   margin: 0;
   max-width: 100%;
