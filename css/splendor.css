@@ -70,6 +70,7 @@ small,
 .splendor-small {
   font-size: 0.875rem;
   color: #666;
+  white-space: nowrap;
 }
 
 img,
@@ -194,6 +195,13 @@ a:hover {
   font-weight: bold;
 }
 
+.text-content .item-img {
+  max-width: 26rem;
+  border-radius: 6px;
+  margin: 0.5rem 0 1rem;
+  display: block;
+}
+
 /* Small screen optimization */
 @media (max-width: 768px) {
   h1 {
@@ -210,6 +218,11 @@ a:hover {
     float: right;
     margin: 0 0 0.5rem 1rem;
     max-width: 5rem;
+  }
+  .text-content .item-img {
+    float: none;
+    max-width: 100%;
+    margin: 0.5rem 0 1rem;
   }
   .text-content {
     padding-right: 0;
